@@ -1,0 +1,6 @@
+dist-newstyle/
+cabal.project.local
+.DS_Store
+*.hi
+*.o
+.ghc.environment.*

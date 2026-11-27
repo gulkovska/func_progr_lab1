@@ -1,0 +1,8 @@
+packages: .
+          vendor/pcre-light
+          vendor/mysql
+
+-- На системах, де mysql-0.2.1 та pcre-light-0.4.1.3 збираються
+-- без патчів (наприклад, GHC 9.4 + Cabal 3.8), достатньо залишити:
+--
+-- packages: .

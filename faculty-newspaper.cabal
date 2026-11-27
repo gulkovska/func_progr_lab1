@@ -1,0 +1,29 @@
+cabal-version:      2.4
+name:               faculty-newspaper
+version:            1.0.0.0
+synopsis:           Інформаційна система "Мережева газета факультету"
+description:        Лабораторна робота: Haskell + MySQL, type classes та instances.
+license:            MIT
+category:           Education
+author:             Sasha Gylkovska
+maintainer:         student@example.com
+build-type:         Simple
+extra-source-files: README.md
+                    sql/schema.sql
+                    sql/seed.sql
+
+executable faculty-newspaper
+    main-is:          Main.hs
+    hs-source-dirs:   app, src
+    other-modules:    Newspaper.Types
+                      Newspaper.Entity
+                      Newspaper.Db
+                      Newspaper.Queries
+                      Newspaper.Cli
+    build-depends:    base >= 4.14 && < 5
+                    , mysql-simple >= 0.4.7 && < 0.5
+                    , mysql >= 0.2 && < 0.3
+                    , text >= 1.2 && < 3
+                    , time >= 1.9 && < 2
+    default-language: Haskell2010
+    ghc-options:      -Wall -Wcompat -threaded
